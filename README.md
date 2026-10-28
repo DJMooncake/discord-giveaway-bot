@@ -62,12 +62,14 @@ npm install
 
 ### 2. Configure environment
 
-Create a `.env` file in the project root using the example file as a template:
+Create a local `.env` file in the project root using the example file as a template:
 
 ```env
 DISCORD_TOKEN=your_bot_token_here
 DISCORD_CLIENT_ID=your_application_id_here
 ```
+
+Important: this file is local-only and should never be committed to a public repository. The public repo includes `.env.example`, not a real `.env` with credentials. Anyone who wants to run the bot creates their own `.env` on their machine with their own token.
 
 ### 3. Run locally
 
