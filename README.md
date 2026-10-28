@@ -138,6 +138,17 @@ https://discord.com/oauth2/authorize?client_id=YOUR_APPLICATION_ID&permissions=8
 
 If you want a more minimal setup, you can reduce the permission integer and grant only the features you need for your server.
 
+## Required Permissions by Feature
+
+- Start giveaway: `Send Messages`, `Embed Links`, `Use Application Commands`
+- Join/leave buttons: `Read Message History`, `Use Application Commands`
+- Log channel support: `Send Messages` in the selected log channel
+- Set giveaway role or log channel: `Manage Guild` or equivalent admin permission on the server
+- Auto-delete ended giveaways: `Manage Messages`
+- List, stats, cancels, and rerolls: `Send Messages` and ability to view the relevant channel
+
+This is a practical breakdown for server admins deciding which permissions to grant the bot.
+
 ## Commands
 
 ### Slash commands
