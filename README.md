@@ -188,6 +188,37 @@ If you want to support this project, you can:
 - The repository is set up to ignore `.env` files by default.
 - This project is suitable for running on a local machine, a VPS, or a hosted Node.js environment.
 
+## Platform Startup Helpers
+
+This repository includes starter scripts so it is easy to run on both Windows and Linux without needing to remember the exact command sequence.
+
+### Windows
+
+```bat
+start.bat
+```
+
+### Linux / macOS
+
+```bash
+chmod +x start.sh
+./start.sh
+```
+
+These wrappers run the environment check first and then launch the bot with the project’s normal startup path.
+
+## Download / Release Flow
+
+GitHub users can download the project in a few ways:
+
+- clone the repository with Git
+- download a zip archive from the repository page
+- use a GitHub Release if you publish one later
+
+For public distribution, the best approach is to publish a GitHub Release with packaged ZIP or TAR archives, rather than exposing a live `.env` file or bot token.
+
+The bot token stays local to each user’s machine in their own `.env` file.
+
 ## License
 
 This project is licensed under the MIT License.
