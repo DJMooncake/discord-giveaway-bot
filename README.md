@@ -1,50 +1,53 @@
 # Discord Giveaway Bot
 
-A TypeScript Discord bot for hosting giveaways with both slash commands and classic prefix commands.
+<p align="center">
+  <img src="https://img.shields.io/badge/TypeScript-007ACC?style=for-the-badge&logo=typescript&logoColor=white" alt="TypeScript" />
+  <img src="https://img.shields.io/badge/Discord.js-5865F2?style=for-the-badge&logo=discord&logoColor=white" alt="Discord.js" />
+  <img src="https://img.shields.io/badge/License-MIT-green?style=for-the-badge" alt="MIT License" />
+</p>
+
+A full-featured TypeScript Discord giveaway bot with support for both slash commands and classic prefix commands.
+
+## Overview
+
+This project is built to run a Discord giveaway bot with:
+- flexible duration parsing from seconds to years
+- button-based entry and leave actions
+- role restrictions
+- logging support
+- per-server configuration
+- announcement and stats utilities
 
 ## Features
 
-- Start giveaways with a title, duration, and number of winners
-- Flexible duration parsing from seconds to years, including values like `30s`, `45m`, `1d 4h`, and `1y 2d 3h 4m 5s`
-- Optional role requirement for entry
+- Start giveaways with custom titles, winners, roles, and durations
+- Duration parsing supports `s`, `m`, `h`, `d`, and `y`
+- Optional role requirement before joining
 - Join and leave buttons on giveaway embeds
-- Active giveaway listing
-- Cancel, cancel-all, end, reroll, and stats commands
-- Guild log channel support
-- Per-server prefix configuration
-- Auto-delete option for ended giveaway messages
+- List active giveaways
+- End, cancel, reroll, and stats commands
+- Configurable log channel for giveaway events
+- Per-server prefix and auto-delete settings
+- Works with both slash commands and prefix commands
 
-## Tech Stack
+## Quick Start
 
-- Node.js
-- TypeScript
-- Discord.js v14
-- dotenv
+### 1. Install dependencies
 
-## Requirements
+```bash
+npm install
+```
 
-- Node.js 20+
-- A Discord bot token
-- A Discord application ID
+### 2. Configure environment
 
-## Installation
+Create a `.env` file in the project root using the example file as a template:
 
-1. Clone the repo.
-2. Open a terminal in the project folder.
-3. Install dependencies:
+```env
+DISCORD_TOKEN=your_bot_token_here
+DISCORD_CLIENT_ID=your_application_id_here
+```
 
-   ```bash
-   npm install
-   ```
-
-4. Create a `.env` file using `.env.example` as a template and add your Discord credentials.
-
-   ```env
-   DISCORD_TOKEN=your_bot_token_here
-   DISCORD_CLIENT_ID=your_application_id_here
-   ```
-
-## Running the Bot
+### 3. Run locally
 
 ```bash
 npm run dev
@@ -64,10 +67,10 @@ npm start
 3. Open the Bot section and create a bot.
 4. Copy the bot token into `.env`.
 5. Copy the Application ID into `.env`.
-6. Use the OAuth2 URL Generator and select:
+6. In OAuth2 > URL Generator, select:
    - `bot`
    - `applications.commands`
-7. Invite the bot to your server.
+7. Invite the bot to your Discord server.
 
 Example invite URL:
 
@@ -123,13 +126,13 @@ Examples:
 - `1d 4h`
 - `1y 2d 3h 4m 5s`
 
-## Notes
+## Deployment Notes
 
-- The giveaway embeds include join and leave buttons.
-- Role restrictions are optional but supported.
-- Giveaway events can be logged to a configured channel.
-- The bot supports both slash and text commands for compatibility.
+- Keep your real Discord token in a local `.env` file only.
+- Do not commit secrets to Git.
+- The repository is set up to ignore `.env` files by default.
+- This project is suitable for running on a local machine, a VPS, or a hosted Node.js environment.
 
 ## License
 
-This project is provided as-is for personal and server use.
+This project is licensed under the MIT License.
