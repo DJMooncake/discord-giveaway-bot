@@ -1,6 +1,10 @@
 # Discord Giveaway Bot
 
 <p align="center">
+  <img src="./assets/banner.svg" alt="Discord Giveaway Bot banner" width="100%" />
+</p>
+
+<p align="center">
   <img src="https://img.shields.io/badge/TypeScript-007ACC?style=for-the-badge&logo=typescript&logoColor=white" alt="TypeScript" />
   <img src="https://img.shields.io/badge/Discord.js-5865F2?style=for-the-badge&logo=discord&logoColor=white" alt="Discord.js" />
   <img src="https://img.shields.io/badge/License-MIT-green?style=for-the-badge" alt="MIT License" />
