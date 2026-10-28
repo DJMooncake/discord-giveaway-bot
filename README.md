@@ -93,6 +93,21 @@ For a production build:
 npm start
 ```
 
+## Quick Setup Checklist
+
+Before starting the bot, make sure you have:
+
+- [ ] Node.js 20+ installed
+- [ ] dependencies installed with `npm install`
+- [ ] a local `.env` file created from `.env.example`
+- [ ] a valid Discord bot token added to `.env`
+- [ ] a valid Discord application ID added to `.env`
+- [ ] the bot invited to the server with the required permissions
+- [ ] the server has a valid text channel for giveaways
+- [ ] you tested a giveaway in a development server first
+
+This short checklist is the fastest way to get the bot running correctly.
+
 ## Discord Setup
 
 1. Go to the Discord Developer Portal.
