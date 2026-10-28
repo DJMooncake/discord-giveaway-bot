@@ -5,6 +5,9 @@
 </p>
 
 <p align="center">
+  <a href="https://github.com/DJMooncake/discord-giveaway-bot/actions/workflows/build.yml">
+    <img src="https://github.com/DJMooncake/discord-giveaway-bot/actions/workflows/build.yml/badge.svg" alt="Build status" />
+  </a>
   <img src="https://img.shields.io/badge/TypeScript-007ACC?style=for-the-badge&logo=typescript&logoColor=white" alt="TypeScript" />
   <img src="https://img.shields.io/badge/Discord.js-5865F2?style=for-the-badge&logo=discord&logoColor=white" alt="Discord.js" />
   <img src="https://img.shields.io/badge/License-MIT-green?style=for-the-badge" alt="MIT License" />
@@ -77,10 +80,16 @@ Important: this file is local-only and should never be committed to a public rep
 npm run dev
 ```
 
+### 4. Validate and build
+
+```bash
+npm run test
+npm run build
+```
+
 For a production build:
 
 ```bash
-npm run build
 npm start
 ```
 

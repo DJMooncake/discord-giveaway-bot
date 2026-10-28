@@ -6,6 +6,7 @@
     "check-env": "node scripts/check-env.js",
     "dev": "npm run check-env && ts-node src/index.ts",
     "build": "tsc",
+    "test": "tsc --noEmit",
     "start": "npm run check-env && node dist/index.js"
   },
   "dependencies": {
