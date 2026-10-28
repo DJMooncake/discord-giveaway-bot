@@ -6,22 +6,18 @@
   <img src="https://img.shields.io/badge/License-MIT-green?style=for-the-badge" alt="MIT License" />
 </p>
 
+Author: DJMooncake
+
 A full-featured TypeScript Discord giveaway bot with support for both slash commands and classic prefix commands.
 
 ## Overview
 
-This project is built to run a Discord giveaway bot with:
-- flexible duration parsing from seconds to years
-- button-based entry and leave actions
-- role restrictions
-- logging support
-- per-server configuration
-- announcement and stats utilities
+This project is built for running giveaways in Discord servers with a clean, reusable setup. It supports flexible timing, role-gated access, join/leave buttons, server-specific settings, and a wide range of giveaway management commands.
 
 ## Features
 
 - Start giveaways with custom titles, winners, roles, and durations
-- Duration parsing supports `s`, `m`, `h`, `d`, and `y`
+- Flexible duration parsing from seconds to years: `s`, `m`, `h`, `d`, `y`
 - Optional role requirement before joining
 - Join and leave buttons on giveaway embeds
 - List active giveaways
@@ -29,6 +25,28 @@ This project is built to run a Discord giveaway bot with:
 - Configurable log channel for giveaway events
 - Per-server prefix and auto-delete settings
 - Works with both slash commands and prefix commands
+
+## Screenshots
+
+Add your screenshots here to showcase the bot in action.
+
+```md
+![Giveaway Embed](./assets/giveaway-embed.png)
+![Giveaway Stats](./assets/giveaway-stats.png)
+![Bot Setup](./assets/bot-setup.png)
+```
+
+You can add images to an `assets/` folder and reference them here.
+
+## How It Works
+
+The bot keeps a lightweight in-memory registry of active giveaways and guild settings.
+
+- Each giveaway stores its message ID, channel, guild, title, winner count, end time, and participants.
+- When a giveaway starts, the bot sends an embed with join and leave buttons.
+- Button clicks are validated for cooldowns, duplicate entries, and required roles.
+- When the timer expires, the bot selects winners and posts the result to the giveaway thread or channel.
+- Guild settings are tracked separately so prefixes, log channels, roles, and auto-delete states can vary per server.
 
 ## Quick Start
 
@@ -125,6 +143,28 @@ Examples:
 - `2h`
 - `1d 4h`
 - `1y 2d 3h 4m 5s`
+
+## Deployment Checklist
+
+Before running the bot in production, confirm:
+
+- [ ] Node.js 20+ is installed
+- [ ] dependencies are installed with `npm install`
+- [ ] a local `.env` file exists with valid Discord values
+- [ ] the bot is invited to the target Discord server
+- [ ] slash commands are enabled in the application
+- [ ] your server has the required permission scopes
+- [ ] you have reviewed log channel and role settings
+- [ ] you have tested a giveaway in a dev server before production use
+
+## Support
+
+If you want to support this project, you can:
+
+- star the repository
+- share it with others
+- contribute improvements
+- open an issue for bugs or feature requests
 
 ## Deployment Notes
 
