@@ -1,0 +1,55 @@
+name: Release
+
+on:
+  push:
+    tags:
+      - 'v*.*.*'
+  workflow_dispatch:
+    inputs:
+      version:
+        description: 'Release tag to publish (example: v1.0.0)'
+        required: true
+        default: 'v1.0.0'
+
+permissions:
+  contents: write
+
+jobs:
+  build-release:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: 20
+          cache: npm
+
+      - name: Install dependencies
+        run: npm install
+
+      - name: Validate TypeScript
+        run: npm run test
+
+      - name: Build project
+        run: npm run build
+
+      - name: Prepare release folders
+        run: |
+          mkdir -p release/discord-giveaway-bot
+          rsync -a --exclude '.git' --exclude 'node_modules' --exclude '.env' --exclude '.env.*' --exclude '.github' ./ release/discord-giveaway-bot/
+          cd release
+          zip -r discord-giveaway-bot-windows.zip discord-giveaway-bot
+          tar -czf discord-giveaway-bot-linux.tar.gz discord-giveaway-bot
+
+      - name: Publish GitHub Release
+        uses: softprops/action-gh-release@v2
+        if: startsWith(github.ref, 'refs/tags/') || github.event_name == 'workflow_dispatch'
+        with:
+          files: |
+            release/discord-giveaway-bot-windows.zip
+            release/discord-giveaway-bot-linux.tar.gz
+          generate_release_notes: true
