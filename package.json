@@ -3,9 +3,10 @@
   "version": "1.0.0",
   "private": true,
   "scripts": {
-    "dev": "ts-node src/index.ts",
+    "check-env": "node scripts/check-env.js",
+    "dev": "npm run check-env && ts-node src/index.ts",
     "build": "tsc",
-    "start": "node dist/index.js"
+    "start": "npm run check-env && node dist/index.js"
   },
   "dependencies": {
     "discord.js": "^14.18.0",
