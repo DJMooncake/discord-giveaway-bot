@@ -21,6 +21,15 @@ A full-featured TypeScript Discord giveaway bot with support for both slash comm
 
 This project is built for running giveaways in Discord servers with a clean, reusable setup. It supports flexible timing, role-gated access, join/leave buttons, server-specific settings, and a wide range of giveaway management commands.
 
+## Example Use Cases
+
+This bot is ideal for:
+
+- Discord gaming communities hosting vanity giveaways
+- creator servers giving away Steam keys, Nitro, or merch
+- community servers needing role-gated contests
+- admins who want simple giveaway management without a third-party service
+
 ## Why This Bot?
 
 This bot is built for communities that want a fast, flexible giveaway system without needing a complicated external service.
