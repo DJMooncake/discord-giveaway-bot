@@ -111,6 +111,33 @@ Example invite URL:
 https://discord.com/oauth2/authorize?client_id=YOUR_APPLICATION_ID&permissions=8&scope=bot%20applications.commands
 ```
 
+## Bot Permissions
+
+The bot works best with the following permissions enabled on the server or invite URL:
+
+- View Channels
+- Send Messages
+- Embed Links
+- Read Message History
+- Use Application Commands
+- Add Reactions
+- Manage Messages
+
+These permissions allow the bot to:
+- create giveaway embeds
+- send giveaway updates
+- accept button interactions
+- read and manage giveaway messages
+- support reaction-based interactions if needed
+
+A broad example invite URL is:
+
+```text
+https://discord.com/oauth2/authorize?client_id=YOUR_APPLICATION_ID&permissions=8&scope=bot%20applications.commands
+```
+
+If you want a more minimal setup, you can reduce the permission integer and grant only the features you need for your server.
+
 ## Commands
 
 ### Slash commands
